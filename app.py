@@ -375,10 +375,10 @@ def solve_with_linear_programming_fallback(ingredients, requirements):
 # MAIN APP
 # --------------------------------------------------
 def main():
-    # Header with image
+    # Small header with just the icon (optional)
     st.markdown("""
-    <div style='text-align: center; padding: 20px;'>
-        <h1>🐔 Healthy Chicken Feed Formulator</h1>
+    <div style='text-align: center; padding: 10px; margin-bottom: 5px;'>
+        <span style='font-size: 2em;'>🐔</span>
     </div>
     """, unsafe_allow_html=True)
     
@@ -404,9 +404,19 @@ def main():
         show_calculation()
 
 def show_home():
+    # Beautiful blue title for home page
+    st.markdown("""
+    <div style='text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; margin: 0 0 25px 0; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);'>
+        <h1 style='color: white; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);'>🐔 Healthy Chicken</h1>
+        <h2 style='color: white; font-size: 1.8em; margin: 10px 0 0 0; opacity: 0.95; font-weight: 400;'>Feed Formulator</h2>
+        <p style='color: white; font-size: 1.1em; margin: 15px 0 0 0; opacity: 0.9;'>Optimize your poultry nutrition with science-based formulations</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Welcome card
     st.markdown("""
     <div class='css-1r6slb0'>
-        <h2>Welcome to Chicken Feed Formulator!</h2>
+        <h2 style='color: #4a5568; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;'>Welcome to Chicken Feed Formulator!</h2>
         <p style='font-size: 18px; color: #4a5568; line-height: 1.6;'>
             This application helps you formulate the optimal chicken feed mixture based on nutritional requirements.
         </p>
@@ -424,7 +434,6 @@ def show_home():
         </p>
     </div>
     """, unsafe_allow_html=True)
-
 def show_settings():
     st.markdown("<div class='main-card'>", unsafe_allow_html=True)
     
